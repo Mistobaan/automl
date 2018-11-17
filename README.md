@@ -15,3 +15,19 @@ Generates a string representing a model description. Train an RL algorithm using
 [Paper](https://arxiv.org/pdf/1611.01578)
 [Video](https://www.youtube.com/watch?v=XDtFXBYpl1w)
 [Slides](http://rll.berkeley.edu/deeprlcoursesp17/docs/quoc_barret.pdf)
+
+
+# 2018
+
+## Efficient Neural Architecture Search
+
+We propose Efficient Neural Architecture Search (ENAS), a fast and inexpensive approach for automatic model design. In ENAS, a controller learns to discover neural network architectures by searching for an optimal subgraph within a large computational graph. The controller is trained with policy gradient to select a subgraph that maximizes the expected reward on the validation set. Meanwhile the model corresponding to the selected subgraph is trained to minimize a canonical cross entropy loss. Thanks to parameter sharing between child models, ENAS is fast: it delivers strong empirical performances using much fewer GPU-hours than all existing automatic model design approaches, and notably, 1000x less expensive than standard Neural Architecture Search. On the Penn Treebank dataset, ENAS discovers a novel architecture that achieves a test perplexity of 55.8, establishing a new state-of-the-art among all methods without post-training processing. On the CIFAR-10 dataset, ENAS designs novel architectures that achieve a test error of 2.89%, which is on par with NASNet (Zoph et al., 2018), whose test error is 2.65%.
+
+### Comments
+- 1000x less expensive than standard Neural Architecture Search
+- Uses parameter sharing to improve the speed of architecture search
+- Employs various training tricks to have a stable learning
+
+### Resources
+[Paper](https://arxiv.org/abs/1802.03268)
+[Code](https://github.com/melodyguan/enas)
